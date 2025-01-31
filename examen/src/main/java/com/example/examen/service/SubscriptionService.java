@@ -67,6 +67,4 @@ public class SubscriptionService {
 
         subscriptionRepository.delete(subscription);
     }
-
-    // ... rest of the service code remains the same ...
 }
