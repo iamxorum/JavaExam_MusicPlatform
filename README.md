@@ -26,6 +26,7 @@ A Spring Boot application that manages music streaming subscriptions with a simp
 - 📄 HTML5
 - 🎨 CSS3
 - 💻 JavaScript (Vanilla)
+- 🐍 Python (for serving static files)
 
 ## 🚀 Getting Started
 
@@ -35,6 +36,7 @@ A Spring Boot application that manages music streaming subscriptions with a simp
 - 🏗️ Maven
 - 🐳 Docker (for PostgreSQL)
 - 🌐 Web browser
+- 🐍 Python 3.x
 
 ### 💾 Database Setup
 
@@ -54,8 +56,12 @@ docker-compose up -d
 2. Run the application:
 ./mvnw spring-boot:run
 
-3. Access the application:
-- 🌐 Frontend: http://localhost:8080
+3. Run the frontend (in a separate terminal):
+cd frontend
+python -m http.server 3000
+
+4. Access the application:
+- 🌐 Frontend: http://localhost:3000
 - 📚 Swagger UI: http://localhost:8080/swagger-ui.html
 - 📖 API Docs: http://localhost:8080/v3/api-docs
 
