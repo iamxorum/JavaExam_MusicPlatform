@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscription Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('add')">Add Subscription</button>
+            <button class="tab-btn" onclick="showTab('delete')">Delete Subscription</button>
+        </div>
+
+        <div id="add-form" class="tab-content active">
+            <h2>Add New Subscription</h2>
+            <form id="subscription-form">
+                <input type="number" placeholder="User ID" name="userId" required>
+                <select name="plan" required>
+                    <option value="">Select Plan</option>
+                    <option value="FREE">Free</option>
+                    <option value="PREMIUM">Premium</option>
+                    <option value="FAMILY">Family</option>
+                </select>
+                <select name="billingCycle" required>
+                    <option value="">Select Billing Cycle</option>
+                    <option value="MONTHLY">Monthly</option>
+                    <option value="YEARLY">Yearly</option>
+                </select>
+                <input type="number" step="0.01" placeholder="Price" name="price" required>
+                <input type="date" placeholder="Start Date" name="startDate" required>
+                <input type="date" placeholder="End Date" name="endDate">
+                <button type="submit">Create Subscription</button>
+            </form>
+        </div>
+
+        <div id="delete-form" class="tab-content">
+            <h2>Delete Subscription</h2>
+            <form id="delete-form">
+                <input type="number" placeholder="Subscription ID" name="id" required>
+                <button type="submit">Delete Subscription</button>
+            </form>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

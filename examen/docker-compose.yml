@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres_exam:
+    image: postgres:latest
+    container_name: postgres_exam
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_exam_data:/var/lib/postgresql/data
+    networks:
+      - exam_network
+
+volumes:
+  postgres_exam_data:
+    name: postgres_exam_data
+
+networks:
+  exam_network:
+    name: exam_network
+    driver: bridge
